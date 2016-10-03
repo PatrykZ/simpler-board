@@ -11,7 +11,7 @@
     <form method="post">
         <label>
             <div>Your comment</div>
-            <textarea name="comment" rows="6">{{comment}}</textarea>
+            <textarea name="comment" rows="6">{{comment.body}}</textarea>
             {{error_comment}}
         </label>
         <br>
@@ -19,6 +19,9 @@
             <input type="submit" class="button button--fullwidth button--green button--md">
         </div>
     </form>
+
+    <a href="/{{comment.post_id}}">Cancel</a>
+
 </div>
 
 {% endblock %}

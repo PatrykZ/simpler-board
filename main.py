@@ -327,13 +327,12 @@ class EditComment(Handler):
         # Finds and stores the comment instance by id from the database
         comment_instance = db.get(key)
 
-        params = dict(comment=comment_instance.body)
-
         # If user exists and logged in user's username equals to comment's
         # author username render edit comment
+
         if self.user:
             if self.user.username == comment_instance.author:
-                self.render('editcomment.html', **params)
+                self.render('editcomment.html', comment=comment_instance)
         else:
             self.redirect('/%s' % str(comment_instance.post_id))
 
