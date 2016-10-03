@@ -35,7 +35,7 @@
     </div>
 
     <p class="post__body post__body--single">
-        {{post.post.replace('\n', '<br>') | safe}}
+        {{post.post.replace('\n', '<br/>') | safe}}
     </p>
 
     <div class="post_likes">
@@ -90,7 +90,7 @@
         {% for comment in comments %}
         <div class="comment">
             <p class="comment__body">
-                {{comment.body | safe}}
+                {{comment.body}}
             </p>
 
             <p class="comment__author">

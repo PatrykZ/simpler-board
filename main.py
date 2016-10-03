@@ -16,6 +16,7 @@
 #
 
 import os
+import cgi
 
 import hashlib
 import hmac
@@ -164,7 +165,8 @@ class Post(db.Model):
     # about the title, body and author of the post
     @classmethod
     def add_post(cls, title, body, author):
-        return Post(title=title, post=body, author=author)
+        body_escaped = cgi.escape(str(body))
+        return Post(title=title, post=body_escaped, author=author)
 
     @classmethod
     def by_id(cls, post_id):
