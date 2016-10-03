@@ -273,11 +273,9 @@ class EditPost(Handler):
         # Finds and stores the post instance by id from the database
         post_instance = db.get(key)
 
-        params = dict(title=post_instance.title, post=post_instance.post)
-
         if self.user:
             if self.user.username == post_instance.author:
-                self.render('editpost.html', **params)
+                self.render('editpost.html', post=post_instance)
             else:
                 self.redirect('/%s' % str(post_instance.key().id()))
         else:
