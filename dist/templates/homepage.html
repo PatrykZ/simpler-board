@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="wrapper wrapper--hero">
+
+        {% if not user %}
+        <h1 class="hero__header">Hi there, stranger</h1>
+        <div class="hero__subheader">
+            Simpler is a public multi-user posting board. Do what you want, but be nice. Or else.
+        </div>
+        {% endif %}
+
+        {% if user %}
+        <h1 class="hero__header">Welcome back, {{user.username}}</h1>
+        <div class="hero__subheader">Nice to see you again.
+        </div>
+
+        {% endif %}
+
+    </div>
+</div>
+
+<section class="wrapper wrapper--posts">
+    {% if user %}
+    <a class="button button--fullwidth button--green button--lg"
+       href="/addpost">
+        + Add new post
+    </a>
+    {% endif %}
+
+    {%for post in posts%}
+
+    {{post.render() | safe}}
+
+    {% endfor %}
+
+    {% endblock %}
+</section>

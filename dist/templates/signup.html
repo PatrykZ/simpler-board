@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="wrapper wrapper--login">
+    <h1 class="full-width text-center header__leaf header__leaf--3">Sign up</h1>
+
+    <form method="post">
+        <label>
+            <div>Your username *</div>
+            <input type="text" name="username" value="{{username}}" placeholder="for ex. Dinkledon"/>
+            <div class="error error--red">
+                {{error_username}}
+            </div>
+        </label>
+        <label>
+            <div>Your email</div>
+            <input type="text" name="email" value="{{email}}" placeholder="yourname@example.com"/>
+            <div class="error error--red">
+            {{error_email}}
+            </div>
+        </label>
+        <label>
+            <div>Your password *</div>
+            <input type="password" name="password"/>
+            <div class="error error--red">
+            {{error_password}}
+            </div>
+        </label>
+        <label>
+            <div>Repeat password *</div>
+            <input type="password" name="verify"/>
+            <div class="error error--red">
+            {{error_verify}}
+            </div>
+        </label>
+        <div>
+            <input type="submit" class="button button--green button--fullwidth button--md">
+        </div>
+        {{error_form}}
+    </form>
+    <div class="login__footer text-center full-width">
+        Already have an account? <a href="/login">Login</a>
+    </div>
+</div>
+
+{% endblock %}

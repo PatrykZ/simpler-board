@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper--posts {
+  margin-top: -30vh;
+}
+
+.wrapper--login {
+  margin-top: 50px;
+  max-width: 400px;
+}
+
+.wrapper--post {
+  margin-top: 20px;
+  max-width: 620px;
+}
+
+.wrapper--hero {
+  margin-top: -180px;
+  text-align: center;
+  max-width: 560px;
+}
+
+.wrapper--addpost, .wrapper--edit {
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+
+.section--gray {
+  background-color: $background-grey;
+}
+
+.section--sm {
+  padding: 30px 20px;
+}

@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="wrapper wrapper--addpost">
+
+    <h1 class="full-width text-center header__leaf header__leaf--3">Add new post</h1>
+
+    <form method="post">
+        <label>
+            <div>Title</div>
+            <input type="text" name="title" value="{{title}}" placeholder="The title of your post"/>
+            {{error_title}}
+
+        </label>
+        <br>
+        <label>
+            <div>Post</div>
+            <textarea name="post" rows="6" placeholder="Tell your story">{{post}}</textarea>
+            {{error_post}}
+
+        </label>
+        <br>
+        <div>
+            <input type="submit" class="button button--fullwidth button--green button--md">
+        </div>
+        {{error_form}}
+    </form>
+</div>
+{% endblock %}

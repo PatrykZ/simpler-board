@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.hero {
+  width: 100%;
+  min-height: 600px;
+  height: 60vh;
+  padding: 20px;
+  background-image: url('/images/bg-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include display(flex);
+  @include align-items(center);
+  @include respond-to(medium) {
+    min-height: 440px;
+  }
+}
+
+.hero__header {
+  font-size: 58px;
+  color: $dark-grey;
+  font-weight: $text-weight-300;
+  margin: 0;
+  line-height: 120%;
+  position: relative;
+  &:before {
+    content: '';
+    top: -50px;
+    right: 25%;
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-image: url('/images/image-single-leaf.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include respond-to(small) {
+    line-height: 54px;
+    margin-bottom: 30px;
+    font-size: 44px;
+    &:before {
+      top: -70px;
+      right: 10%;
+    }
+  }
+}
+
+.hero__subheader {
+  font-size: 22px;
+  font-weight: $text-weight-300;
+  color: $mid-grey;
+}

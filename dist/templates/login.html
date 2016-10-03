@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="wrapper wrapper--login">
+    <h1 class="full-width text-center header__leaf">Login</h1>
+
+    <form method="post">
+        <label>
+            <div>Your username</div>
+            <input type="text" name="username" placeholder="for ex. Dinkledon"/>
+        </label>
+
+        <label>
+            <div>Your password</div>
+            <input type="password" name="password"
+                   placeholder="Password that you used while signing up"/>
+        </label>
+
+        <div class="error error--red">
+            {{error_form}}
+        </div>
+
+        <div>
+            <input type="submit"
+                   class="button button--fullwidth button--green button--md">
+        </div>
+    </form>
+    <div class="login__footer text-center full-width">
+        Don't have an account? <a href="/signup">Sign up</a>
+    </div>
+
+</div>
+
+{% endblock %}

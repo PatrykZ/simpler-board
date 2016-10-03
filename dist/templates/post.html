@@ -1,0 +1,25 @@
+<a href="/{{post.key().id()}}" class="post">
+    <div class="post__top">
+        <h2 class="post__title">
+            {{post.title}}
+        </h2>
+
+        <p class="post__body">
+            {{post._render_text | safe}}
+        </p>
+    </div>
+
+    <div class="post__bottom">
+        <div class="post__author">
+            By {{post.author}} on {{post.date.strftime("%b %d, %Y")}}
+        </div>
+
+        <div class="post__likes">
+            {{ likes.count() }} Likes
+        </div>
+
+        <div class="post__comments">
+            {{ comments.count() }} Comments
+        </div>
+    </div>
+</a>

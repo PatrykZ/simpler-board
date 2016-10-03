@@ -1,0 +1,26 @@
+.header__leaf {
+  position: relative;
+  &:before {
+    content: '';
+    top: -65px;
+    right: 10%;
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-image: url('/images/image-single-leaf-2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.header__leaf--2 {
+  &:before {
+    background-image: url('/images/image-single-leaf-3.png');
+  }
+}
+.header__leaf--3 {
+  &:before {
+    background-image: url('/images/image-single-leaf-4.png');
+  }
+}

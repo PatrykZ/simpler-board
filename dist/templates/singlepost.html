@@ -1,0 +1,110 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<article class="wrapper wrapper--post section--sm">
+    <div class="full-width">
+        <a href="/"
+           class="button-link button-link--green button-link--md pull-left">Go
+            to
+            homepage</a>
+        {% if post.author == user.username %}
+        <div class="pull-right">
+            <a href="/editpost/{{post.key().id()}}"
+               class="button-link button-link--mid-gray button-link--editpost button-link--md pull-left">Edit
+                post</a>
+
+            <a href="/deletepost/{{post.key().id()}}"
+               class="button-link button-link--mid-gray button-link--md pull-left">Delete
+                post</a>
+        </div>
+        {% endif %}
+        <div class="clearfix"></div>
+
+
+    </div>
+
+    <h2 class="post__title post__title--single">
+        <a href="/{{post.key().id()}}">
+            {{post.title}}
+        </a>
+    </h2>
+
+    <div class="post__author post__author--single">
+        By {{post.author}} on {{post.date.strftime("%b %d, %Y")}}
+    </div>
+
+    <p class="post__body post__body--single">
+        {{post.post.replace('\n', '<br>') | safe}}
+    </p>
+
+    <div class="post_likes">
+        {% if not post.author == user.username %}
+
+        {% if user_like.count() == 0 %}
+        <a href="/likepost/{{post.key().id()}}"
+           class="button button--stroke button-stroke--green">Like ({{
+            likes.count() }})</a>
+        {% endif %}
+
+        {% if user_like.count() == 1 %}
+        <a href="/likepost/{{post.key().id()}}"
+           class="button button--stroke button-stroke--green">Unlike ({{
+            likes.count() }})</a>
+
+        {% endif %}
+        {% endif %}
+    </div>
+
+</article>
+
+
+<section class="section--gray section--sm">
+    <div class="wrapper wrapper--post">
+        {% if user %}
+        <div class="comments__title">
+            Add comment
+        </div>
+
+        <div class="post__add-comment">
+            <form method="post">
+                <label>
+                    <textarea name="comment" rows="6"
+                              placeholder="Type in your comment here">{{comment}}</textarea>
+                    {{error_comment}}
+                </label>
+                <br>
+                <div>
+                    <input type="submit" class="button button--green button--md"
+                           value="Submit comment">
+                </div>
+            </form>
+        </div>
+        {% endif %}
+
+        <div class="comments__title">
+            Comments ({{ comments.count() }})
+        </div>
+
+
+        {% for comment in comments %}
+        <div class="comment">
+            <p class="comment__body">
+                {{comment.body | safe}}
+            </p>
+
+            <p class="comment__author">
+                By {{comment.author}} on {{comment.date.strftime("%b %d, %Y")}}
+            </p>
+
+            {% if user.username == comment.author%}
+            <a href="/editcomment/{{comment.key().id()}}"
+               class="button-link button-link--green button-link--md">Edit
+                Comment</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+.comment {
+  margin: 20px 0;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.comment__body {
+  margin: 0;
+  color: $dark-grey;
+  font-weight: $text-weight-300;
+  margin-bottom: 5px;
+}
+
+.comment__author {
+  margin: 0;
+  color: $mid-grey;
+}
+
+.comments__title {
+
+}
+
+.post__add-comment {
+  margin-bottom: 40px;
+}

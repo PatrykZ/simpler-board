@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="wrapper wrapper--edit">
+
+    <h1 class="full-width text-center header__leaf header__leaf--3">Edit
+        comment</h1>
+
+
+    <form method="post">
+        <label>
+            <div>Your comment</div>
+            <textarea name="comment" rows="6">{{comment}}</textarea>
+            {{error_comment}}
+        </label>
+        <br>
+        <div>
+            <input type="submit" class="button button--fullwidth button--green button--md">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

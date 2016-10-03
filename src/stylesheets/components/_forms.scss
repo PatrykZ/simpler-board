@@ -1,0 +1,44 @@
+input[type='text'], input[type='password'], textarea {
+  font-family: $text-font-stack;
+  border: none;
+  border-bottom: 1px solid $light-grey;
+  width: 100%;
+  padding: 5px 0 12px 0;
+  color: $dark-grey;
+  background-color: transparent;
+  @include transition(0.3s);
+  &:active, &:focus {
+    border-bottom: 2px solid $brand-color;
+    outline: none;
+  }
+}
+
+::-webkit-input-placeholder {
+    color: darken($light-grey, 10%);
+    font-weight: $text-weight-300
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: darken($light-grey, 10%);
+    font-weight: $text-weight-300
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: darken($light-grey, 10%);
+    font-weight: $text-weight-300
+}
+
+:-ms-input-placeholder {
+    color: darken($light-grey, 10%);
+    font-weight: $text-weight-300
+}
+
+
+label {
+  display: block;
+  margin: 25px 0 0 0;
+}
+
+.input--fullwidth {
+  width: 100%;
+}

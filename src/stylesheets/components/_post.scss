@@ -1,0 +1,95 @@
+.post {
+  display: block;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  background-color: $white;
+  margin: 20px 0;
+  @include transition(0.3s);
+  position: relative;
+  &:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    z-index: 999;
+
+    .post__bottom {
+      height: auto;
+    }
+  }
+}
+
+.post__top {
+  padding: 35px 30px;
+}
+
+.post__bottom {
+  @include display(flex);
+  border-top: 1px solid $light-grey;
+  font-size: 14px;
+  color: $mid-grey;
+  font-weight: $text-weight-300;
+  @include respond-to(small) {
+    @include flex-direction(column);
+  }
+}
+
+.post__author {
+  width: 50%;
+  padding: 16px 16px 16px 30px;
+  @include respond-to(small) {
+    width: 100%;
+  }
+}
+
+.post__author--single {
+  width: auto;
+  padding: 0;
+  font-size: 18px;
+  font-weight: $text-weight-300;
+  color: $mid-grey;
+}
+
+.post__body--single {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.post__comments, .post__likes {
+  width: 25%;
+  padding: 16px 20px;
+  border-left: 1px solid $light-grey;
+  font-weight: $text-weight-400;
+  color: $dark-grey;
+  @include respond-to(small) {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid $light-grey;
+    padding-left: 30px;
+  }
+}
+
+.post__comments {
+
+}
+
+.post__title {
+  font-family: $text-font-stack;
+  font-weight: $text-weight-400;
+  font-size: 26px;
+  margin: 0;
+  a {
+    color: $dark-grey;
+  }
+}
+
+.post__title--single {
+  line-height: 120%;
+  font-size: 58px;
+  margin: 40px 0 30px 0;
+  font-family: $text-font-stack-secondary;
+  font-weight: $text-weight-300;
+}
+
+.post__body {
+  color: $mid-grey;
+  font-weight: $text-weight-300;
+  line-height: 150%;
+}

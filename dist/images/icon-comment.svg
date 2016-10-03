@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>ui-16px-3_chat-46</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Post" transform="translate(-413.000000, -264.000000)" fill="#373D51">
+            <g id="Group-2">
+                <g id="ui-16px-3_chat-46" transform="translate(413.000000, 264.000000)">
+                    <g id="Group">
+                        <path d="M15,4 L14,4 L14,10 C14,10.552 13.552,11 13,11 L6.828,11 L5,13 L10,13 L13,16 L13,13 L15,13 C15.552,13 16,12.552 16,12 L16,5 C16,4.448 15.552,4 15,4 L15,4 Z" id="Shape"></path>
+                        <path d="M1,0 L11,0 C11.552,0 12,0.448 12,1 L12,8 C12,8.552 11.552,9 11,9 L6,9 L3,12 L3,9 L1,9 C0.448,9 0,8.552 0,8 L0,1 C0,0.448 0.448,0 1,0 L1,0 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

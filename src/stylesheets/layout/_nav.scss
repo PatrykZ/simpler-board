@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+nav {
+  height: 82px;
+  border-bottom: 1px solid $light-grey;
+  font-size: 16px;
+}
+
+.nav__logo {
+  display: inline-block;
+  width: 112px;
+  height: 35px;
+  vertical-align: middle;
+  content: '';
+  background-image: url("/images/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include respond-to(small) {
+    background-image: url("/images/brandmark.svg");
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.nav__left, .nav__right {
+  padding: 0 20px;
+  line-height: 80px;
+}
+
+.nav__left {
+  float: left;
+}
+
+.nav__right {
+  float: right;
+}
+
+.nav__login, .nav__signup {
+  padding: 12px 20px;
+}
+
+.nav__login {
+  font-size: 16px;
+  color: $mid-grey;
+}
+
+.nav__signup {
+  font-size: 16px;
+  color: $mid-grey;
+  border: 2px solid $light-grey;
+  border-radius: 4px;
+}
+
+.button--signup {
+
+}
+
+.nav__right {
+  float: right;
+}
