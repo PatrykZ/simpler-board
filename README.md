@@ -14,6 +14,3 @@ Public multi-user board built in Python, part of Udacity Full Stack Developer as
 1. Run gulp command from the terminal
 2. Run the application using the local development server (dev_appserver.py)
 3. Visit http://localhost:8080/ in your web browser to view the app.
-
-## Udacity Reviewer
-1. Use files inside dist and app folder for review
