@@ -25,7 +25,7 @@ class EditComment(Handler):
         comment_instance = db.get(key)
 
         # Storing values from the user
-        self.comment = self.request.get('comment')
+        self.comment = cgi.escape(self.request.get('comment'))
 
         # If user exists and logged in user's username equals to comment's
         # author username update comment values in db
