@@ -1,5 +1,5 @@
 from main import *
-from app.utils.hashing import *
+from app.utils.validator import *
 
 class Signup(Handler):
     def get(self):
