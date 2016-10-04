@@ -1,5 +1,5 @@
 # Simpler
-Public multi-user board built in Python, part of Udacity Full Stack Developer assigment.
+Public multi-user board built in Python.
 
 [View demo](http://www.simpler-demo.appspot.com)
 
