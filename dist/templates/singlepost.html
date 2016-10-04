@@ -90,7 +90,7 @@
         {% for comment in comments %}
         <div class="comment">
             <p class="comment__body">
-                {{comment.body}}
+                {{comment.body.replace('\n', '<br/>') | safe}}
             </p>
 
             <p class="comment__author">

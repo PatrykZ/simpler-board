@@ -290,8 +290,8 @@ class EditPost(Handler):
         post_instance = db.get(key)
 
         # Storing values from the user
-        self.title = self.request.get('title')
-        self.post = self.request.get('post')
+        self.title = cgi.escape(self.request.get('title'))
+        self.post = cgi.escape(self.request.get('post'))
 
         # Updating the post instance values
         post_instance.title = str(self.title)
@@ -414,7 +414,7 @@ class SinglePost(Handler):
         # Finds and stores the post instance by id from the database
         post_instance = db.get(key)
 
-        self.body = self.request.get('comment')
+        self.body = cgi.escape(self.request.get('comment'))
 
         if self.user and self.body:
             # Finds and stores the post instance by id from the database
