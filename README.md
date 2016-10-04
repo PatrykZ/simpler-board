@@ -16,4 +16,4 @@ Public multi-user board built in Python, part of Udacity Full Stack Developer as
 3. Visit http://localhost:8080/ in your web browser to view the app.
 
 ## Udacity Reviewer
-1. Use files inside dist folder for review
+1. Use files inside dist and app folder for review
